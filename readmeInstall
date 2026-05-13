@@ -31,11 +31,11 @@ W history
 
 
 
-
- npx hardhat node --hostname   ec2-35-93-106-96.us-west-2.compute.amazonaws.com
-
+npx hardhat node --hostname   ec2-35-93-106-96.us-west-2.compute.amazonaws.com
 
 
+
+npx hardhat console --network localhost
 
 arning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
 --> contracts/NFT.sol
