@@ -1,0 +1,111 @@
+ubuntu@ip-172-31-48-54:~/nftmarket$ npx hardhat console --network localhost
+Downloading compiler 0.8.18
+W history
+    1  ls
+    2  sudo apt-get update
+    3  sudo apt-get install -y ca-certificates curl gnupg
+    4  sudo mkdir -p /etc/apt/keyrings
+    5  curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+    6  NODE_MAJOR=22
+    7  echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+    8  sudo apt-get install nodejs -y
+    9  npm install web3
+   10  sudo apt install npm
+   11  history
+   12  npm install --save-dev @nomiclabs/hardhat-ethers ethers@5.7.2  @nomiclabs/hardhat-waffle ethereum-waffle chai
+   13  history
+   14  npm i @openzeppelin/contracts@4.5.0
+   15  npx create-react-app nftMarket
+   16  npx create-react-app nftmarket
+   17  history
+   18  cd nftmarket/
+   19  npx hardhat init
+   20  ls
+   21  vi hardhat.config.js
+   22  cd contracts/
+   23  ls
+   24  rm Lock.sol
+   25  vi NFT.sol
+
+
+
+
+
+
+ npx hardhat node --hostname   ec2-35-93-106-96.us-west-2.compute.amazonaws.com
+
+
+
+
+arning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> contracts/NFT.sol
+
+
+Compiled 11 Solidity files successfully (evm target: paris).
+Welcome to Node.js v22.22.1.
+Type ".help" for more information.
+> const signers = await ethers.getSigners();
+undefined
+>  const contract =  await ethers.getContractFactory("NFT")
+undefined
+> const cd = await contract.deploy()
+undefined
+>  const [deployer] = await ethers.getSigners();
+undefined
+>  await cd.name()
+'DApp NFT'
+>  await cd.symbol()
+'DAPP'
+> await cd.getTokenCount()
+0n
+> cd.mint("http:/asdfad/uri")
+Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 5099,
+  [Symbol(trigger_async_id_symbol)]: 14
+}
+> cd.mint("http:/asdfad/uritwo")
+Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 5324,
+  [Symbol(trigger_async_id_symbol)]: 14
+}
+> await cd.getTokenCount()
+2n
+> await cd.name()
+'DApp NFT'
+> await cd.symbol()
+'DAPP'
+>
+
+
+
+
+
+
+
+
+ubuntu@ip-172-31-48-54:~/nftmarket/test$ npx hardhat test
+
+
+  NFT Contract
+    Deployment
+      ✔ should set the correct name and symbol
+      ✔ should start with tokenCount = 0
+    Minting
+      ✔ should mint an NFT and increment tokenCount
+      ✔ should assign ownership of the minted NFT to the minter
+      ✔ should store the correct tokenURI
+      ✔ should return the tokenId from mint()
+      ✔ should allow multiple NFTs to be minted
+      ✔ should increment token IDs sequentially
+    Edge cases
+      ✔ should revert when querying a nonexistent token
+
+
+  9 passing (851ms)
+
+
+   26  cd ..
+   27  history
+ubuntu@ip-172-31-48-54:~/nftmarket$
