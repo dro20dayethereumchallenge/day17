@@ -1,45 +1,29 @@
-ubuntu@ip-172-31-48-54:~/nftmarket$ npx hardhat console --network localhost
-Downloading compiler 0.8.18
-W history
-    1  ls
-    2  sudo apt-get update
-    3  sudo apt-get install -y ca-certificates curl gnupg
-    4  sudo mkdir -p /etc/apt/keyrings
-    5  curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-    6  NODE_MAJOR=22
-    7  echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-    8  sudo apt-get install nodejs -y
-    9  npm install web3
-   10  sudo apt install npm
-   11  history
-   12  npm install --save-dev @nomiclabs/hardhat-ethers ethers@5.7.2  @nomiclabs/hardhat-waffle ethereum-waffle chai
-   13  history
-   14  npm i @openzeppelin/contracts@4.5.0
-   15  npx create-react-app nftMarket
-   16  npx create-react-app nftmarket
-   17  history
-   18  cd nftmarket/
-   19  npx hardhat init
-   20  ls
-   21  vi hardhat.config.js
-   22  cd contracts/
-   23  ls
-   24  rm Lock.sol
-   25  vi NFT.sol
 
+sudo apt-get update
+sudo apt-get install -y ca-certificates curl gnupg
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+NODE_MAJOR=22
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+sudo apt-get install nodejs -y
+npm install web3
+sudo apt install npm
+history
+npm install --save-dev @nomiclabs/hardhat-ethers ethers@5.7.2  @nomiclabs/hardhat-waffle ethereum-waffle chai
+history
+npm i @openzeppelin/contracts@4.5.0
+npx create-react-app nftmarket
+cd nftmarket/
+npx hardhat init
 
+vi hardhat.config.js
+cd contracts/
 
-
+rm Lock.sol
+vi NFT.sol
 
 npx hardhat node --hostname   ec2-35-93-106-96.us-west-2.compute.amazonaws.com
-
-
-
 npx hardhat console --network localhost
-
-arning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
---> contracts/NFT.sol
-
 
 Compiled 11 Solidity files successfully (evm target: paris).
 Welcome to Node.js v22.22.1.
