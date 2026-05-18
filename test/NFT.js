@@ -14,12 +14,6 @@ describe("NFT Contract", function () {
     nft = await ethers.deployContract("NFT");
     expect(nft , "contract has been deployed");
 
-
-
- //   NFT = await ethers.getContractFactory("NFT");
- //   nft = await NFT.deploy();
- //   await nft.deployed(); // ethers v5
-    // await nft.waitForDeployment(); // ethers v6
   });
 
   describe("Deployment", function () {
