@@ -21,6 +21,11 @@ cd contracts/
 rm Lock.sol
 vi NFT.sol
 
+
+# from project directory
+mkdir scripts       
+vi scripts/deploy.js
+
 npx hardhat node --hostname   ec2-35-93-106-96.us-west-2.compute.amazonaws.com
 npx hardhat console --network localhost
 
